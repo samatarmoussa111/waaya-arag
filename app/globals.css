@@ -120,3 +120,50 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Dot Background Pattern */
+.bg-dot-pattern {
+  background-image: radial-gradient(
+    circle,
+    var(--color-primary) 1px,
+    transparent 1px
+  );
+  background-size: 20px 20px;
+}
+
+/* Animations personnalisées */
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Utility classes */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

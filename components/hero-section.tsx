@@ -1,33 +1,49 @@
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import Image from "next/image"
 
 export function HeroSection() {
   return (
-    <section className="relative py-20 lg:py-32 overflow-hidden">
-      <div className="container mx-auto px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+    <section className="relative py-32 lg:py-40 overflow-hidden">
+      {/* Dot Background Pattern */}
+      <div className="absolute inset-0 bg-dot-pattern opacity-30"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background"></div>
+
+      <div className="container mx-auto px-6 lg:px-20 relative z-10">
+        <div className="max-w-4xl mx-auto text-center">
           <div className="animate-fade-in">
-            <h1 className="text-4xl lg:text-6xl font-bold leading-tight mb-6">
-              Changer sa vie, <span className="text-primary">un livre à la fois</span>
+            <h1 className="text-5xl lg:text-7xl font-bold leading-tight mb-8">
+              Changer sa vie, <br />
+              <span className="text-primary bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+                un livre à la fois
+              </span>
             </h1>
-            <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+            <p className="text-xl lg:text-2xl text-muted-foreground mb-12 leading-relaxed max-w-3xl mx-auto">
               Des résumés de livres puissants sur le développement personnel, la productivité, la discipline, et la
-              réussite.
+              réussite. Transformez votre quotidien en quelques minutes de lecture.
             </p>
-            <Button asChild size="lg" className="text-lg px-8 py-6">
-              <Link href="/resumes">Découvrir les résumés</Link>
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Button asChild size="lg" className="text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all">
+                <Link href="/resumes">Découvrir les résumés</Link>
+              </Button>
+              <Button asChild variant="outline" size="lg" className="text-lg px-8 py-6">
+                <Link href="/#about">Mon parcours</Link>
+              </Button>
+            </div>
           </div>
-          <div className="animate-slide-up">
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
-              <Image
-                src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&h=600&fit=crop&crop=center"
-                alt="Collection de livres inspirants sur le développement personnel"
-                fill
-                className="object-cover"
-                priority
-              />
+
+          {/* Stats */}
+          <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 animate-slide-up">
+            <div className="text-center">
+              <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">10+</div>
+              <div className="text-muted-foreground">Résumés disponibles</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">5 min</div>
+              <div className="text-muted-foreground">Lecture moyenne</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">100%</div>
+              <div className="text-muted-foreground">Gratuit</div>
             </div>
           </div>
         </div>

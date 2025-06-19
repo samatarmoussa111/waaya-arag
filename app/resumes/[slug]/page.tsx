@@ -89,7 +89,7 @@ export default function BookSummaryPage({ params }: PageProps) {
 
   return (
     <main className="py-12">
-      <div className="container mx-auto px-6 lg:px-8 max-w-4xl">
+      <div className="container mx-auto px-6 lg:px-20 max-w-4xl">
         {/* Navigation de retour */}
         <div className="mb-8">
           <Button variant="ghost" asChild className="mb-4">

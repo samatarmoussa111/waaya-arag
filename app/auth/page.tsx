@@ -7,7 +7,7 @@ import Link from "next/link"
 export default function AuthPage() {
   return (
     <main className="py-20">
-      <div className="container mx-auto px-6 lg:px-8 max-w-md">
+      <div className="container mx-auto px-6 lg:px-20 max-w-md">
         <Card className="animate-fade-in">
           <CardHeader className="text-center">
             <CardTitle className="text-2xl">Rejoindre la communauté</CardTitle>

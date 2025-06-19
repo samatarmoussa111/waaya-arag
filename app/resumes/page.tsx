@@ -107,7 +107,7 @@ export default function ResumesPage() {
 
   return (
     <main className="py-20">
-      <div className="container mx-auto px-6 lg:px-8 max-w-4xl">
+      <div className="container mx-auto px-6 lg:px-20 max-w-4xl">
         <div className="text-center mb-12 animate-fade-in">
           <h1 className="text-4xl lg:text-5xl font-bold mb-4">Tous les résumés</h1>
           <p className="text-xl text-muted-foreground">Découvrez notre collection complète de résumés de livres</p>
