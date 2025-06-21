@@ -8,14 +8,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { Mdx } from "@/features/mdx/Mdx";
 
-interface PageProps {
-  params: {
-    params: Promise<{ slug: string }>;
-  };
-}
-
-export default async function BookSummaryPage({ params }: PageProps) {
-  const { slug } = await params.params;
+export default async function BookSummaryPage({
+  params,
+}: {
+  params: { slug: string };
+}) {
+  const { slug } = params;
   const post = await getPost(slug);
   if (!post) {
     return (
