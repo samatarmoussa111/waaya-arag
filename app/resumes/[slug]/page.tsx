@@ -6,7 +6,6 @@ import { getPost } from "@/lib/posts";
 import { Heart, Share2, ExternalLink, Clock, ArrowLeft } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { Metadata } from "next";
 import { Mdx } from "@/features/mdx/Mdx";
 
 interface PageProps {
@@ -14,24 +13,6 @@ interface PageProps {
     slug: string;
   };
 }
-
-export const generateMetadata = async (props: {
-  params: { slug: string };
-}): Promise<Metadata> => {
-  const post = await getPost(props.params.slug);
-
-  if (!post) {
-    return {
-      title: "404 - Page Not Found",
-      description: "Page not found",
-    };
-  }
-
-  return {
-    title: post.title,
-    description: post.description,
-  };
-};
 
 export default async function BookSummaryPage({ params }: PageProps) {
   const post = await getPost(params.slug);
