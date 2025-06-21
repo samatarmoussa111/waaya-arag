@@ -1,8 +1,14 @@
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import Link from "next/link"
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import Link from "next/link";
 
 export default function AuthPage() {
   return (
@@ -11,7 +17,9 @@ export default function AuthPage() {
         <Card className="animate-fade-in">
           <CardHeader className="text-center">
             <CardTitle className="text-2xl">Rejoindre la communauté</CardTitle>
-            <CardDescription>Accédez à tous les résumés et créez votre bibliothèque personnelle</CardDescription>
+            <CardDescription>
+              Accédez à tous les résumés et créez votre bibliothèque personnelle
+            </CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
             <div className="space-y-2">
@@ -28,12 +36,12 @@ export default function AuthPage() {
             <div className="text-center text-sm text-muted-foreground">
               Pas encore de compte ?{" "}
               <Link href="#" className="text-primary hover:underline">
-                S'inscrire
+                S&apos;inscrire
               </Link>
             </div>
           </CardContent>
         </Card>
       </div>
     </main>
-  )
+  );
 }
