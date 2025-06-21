@@ -10,12 +10,13 @@ import { Mdx } from "@/features/mdx/Mdx";
 
 interface PageProps {
   params: {
-    slug: string;
+    params: Promise<{ slug: string }>;
   };
 }
 
 export default async function BookSummaryPage({ params }: PageProps) {
-  const post = await getPost(params.slug);
+  const { slug } = await params.params;
+  const post = await getPost(slug);
   if (!post) {
     return (
       <main className="py-20">
